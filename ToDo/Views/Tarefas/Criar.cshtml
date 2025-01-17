@@ -1,0 +1,22 @@
+﻿@model TarefaModel
+@{
+    ViewData["Title"] = "Criar";
+}
+<h1 class="display-4">Criar Tarefa</h1>
+
+<form asp-controller="Tarefas" asp-action="Criar" method="post"> 
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Nome Completo</span>
+        <input type="text" asp-for="Trf_NomeUsuario" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Nome da Tarefa</span>
+        <input type="text" asp-for="Trf_Tarefa" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Data de Expiracao</span>
+        <input type="date" asp-for="Trf_DataExpiracao" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+
+    <button type="submit" class="btn btn-success">Criar</button>
+</form>
